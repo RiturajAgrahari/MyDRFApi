@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'api',
     # API REQUIREMENT
     'rest_framework',
+    # FOR UNAUTHENTICATED API SERVICE
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -133,6 +135,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',  # Add the origin of your React app
+]
+
+# Optional: Allow credentials (cookies, authorization headers, etc.) to be sent
+CORS_ALLOW_CREDENTIALS = True
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
