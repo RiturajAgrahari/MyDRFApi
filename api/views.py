@@ -15,7 +15,7 @@ def portfolio_contact_me(request):
     subject = request.data.get("subject")
     message = request.data.get("message")
     email = request.data.get("email")
-    print(subject, message, email)
+    message += email
 
     try:
         send_mail(
