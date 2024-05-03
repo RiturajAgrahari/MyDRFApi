@@ -25,7 +25,7 @@ def portfolio_contact_me(request):
             ["agr.rituraj@gmail.com"],
             fail_silently=False,
         )
-        return Response({"message": "mail sent successfully!"})
+        return Response({"message": "mail sent successfully!"}, status=200)
 
     except Exception as e:
-        return Response({"error": "An Error occurred!"})
+        return Response({"error": "An Error occurred!"}, status=400)
