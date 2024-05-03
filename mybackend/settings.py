@@ -139,6 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',  # Add the origin of your React app
+    'https://riturajagrahari.vercel.app/',
 ]
 
 # Optional: Allow credentials (cookies, authorization headers, etc.) to be sent
